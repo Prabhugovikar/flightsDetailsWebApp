@@ -1,0 +1,144 @@
+.App {
+  text-align: center;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+  background: #f8f9fa;
+  height: 100vh;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: #333;
+}
+
+/* Flight Table */
+.flight-container {
+  overflow-x: auto;
+}
+
+.flight-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.flight-table th {
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  padding: 12px;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.flight-table td {
+  border-bottom: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  transition: background 0.3s ease-in-out;
+}
+
+.flight-table tr:hover {
+  background: #f1f1f1;
+  cursor: pointer;
+}
+
+/* Flight Status Styling */
+.status {
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 5px;
+  text-align: center;
+  display: inline-block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.status.ontime { background: #4caf50; color: white; }
+.status.delayed { background: #ff9800; color: white; }
+.status.boarding { background: #2196f3; color: white; }
+.status.departed { background: #9e9e9e; color: white; }
+
+
+
+.flight-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.15);
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.flight-card:hover {
+  transform: translateY(-5px);
+}
+
+.flight-info p {
+  font-size: 16px;
+  margin: 12px 0;
+  text-align: left;
+  border-left: 4px solid #007bff;
+  padding-left: 10px;
+}
+
+
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.loading-spinner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+
+.back-link {
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 20px;
+  transition:  0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.back-link:hover {
+  background: #0056b3;
+}
+
+
+@media (max-width: 768px) {
+  .flight-table {
+    display: block;
+    overflow-x: auto;
+  }
+
+  .flight-table th, .flight-table td {
+    white-space: nowrap;
+  }
+}
+
+.flight-card {
+  animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(-20px); }
+  to { opacity: 1; transform: translateX(0); }
+}
