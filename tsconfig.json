@@ -2,6 +2,7 @@
   "compilerOptions": {
     "target": "esnext",
     "lib": ["dom", "es2015"],
+    "types": ["jest", "node"],
     "allowJs": true,
     "jsx": "react",
     "module": "commonjs",
